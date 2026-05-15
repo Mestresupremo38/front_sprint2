@@ -189,7 +189,7 @@ button {
     line-height: 1;
 }
 
-/* Mode Picker */
+/* Seletor de modo */
 .mode-picker {
     position: absolute;
     bottom: 8.5rem;
@@ -202,7 +202,7 @@ button {
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    padding: 0 50%; /* Allow first/last items to center */
+    padding: 0 50%; /* Permitir que o primeiro e o último item fiquem centralizados */
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -252,7 +252,7 @@ button {
     box-shadow: 0 0 8px var(--primary);
 }
 
-/* Bottom Navigation */
+/* Navegação na parte inferior */
 footer {
     position: absolute;
     bottom: 0;
@@ -388,7 +388,7 @@ footer {
     color: var(--primary);
 }
 
-/* Icons */
+/* Ícones */
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
     font-size: 20px;
@@ -403,7 +403,7 @@ footer {
     50% { transform: scale(1.1); opacity: 0.2; }
     100% { transform: scale(1); opacity: 0.5; }
 }
-/* More Screen Grid (Inside Viewfinder) */
+/* Mais grade na tela (dentro do visor) */
 .more-viewfinder-grid {
     position: absolute;
     inset: 0;
@@ -471,7 +471,7 @@ footer {
     max-width: 80px;
 }
 
-/* Background Grid (Subtle) */
+/* Fundo em grade (sutil) */
 .grid-pattern {
     position: absolute;
     inset: 0;
@@ -483,7 +483,7 @@ footer {
     z-index: 0;
 }
 
-/* Transitions */
+/* Transições */
 .viewfinder-layer {
     transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -493,7 +493,7 @@ footer {
 }
 
 /* ========================= */
-/* AI Chat Overlay            */
+/* Janela de bate-papo com IA */
 /* ========================= */
 
 .ai-overlay {
@@ -587,7 +587,7 @@ footer {
     font-size: 18px;
 }
 
-/* Messages Area */
+/* Área de mensagens */
 .ai-messages {
     flex: 1;
     overflow-y: auto;
@@ -656,7 +656,7 @@ footer {
     border-color: rgba(143, 245, 255, 0.15);
 }
 
-/* Typing indicator */
+/* Indicador de digitação */
 .ai-typing .ai-bubble::after {
     content: '...';
     animation: aiDots 1.2s steps(4, end) infinite;
@@ -669,7 +669,7 @@ footer {
     75% { content: '...'; }
 }
 
-/* Input Area */
+/* Área de entrada */
 .ai-input-area {
     display: flex;
     align-items: center;

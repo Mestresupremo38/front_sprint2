@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JOVI - Precision Camera</title>
 
-    <!-- Fonts -->
+    <!-- API EXTERNO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet">
 
-    <!-- Styles -->
+    <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -26,7 +26,7 @@
         <div class="viewfinder-layer">
             <div class="grid-pattern"></div>
 
-            <!-- More Modes Content (Replacing Image) -->
+            <!-- Mais Conteúdo de Modos (Substituir Imagem) -->
             <div class="more-viewfinder-grid">
                 <div class="modes-grid">
                     <div class="mode-option">
@@ -88,7 +88,7 @@
             <div class="viewfinder-overlay" aria-hidden="true"></div>
         </div>
 
-        <!-- Top Navigation -->
+        <!-- Navegação superior -->
         <header>
             <div class="header-group">
                 <button class="icon-btn" aria-label="Settings">
@@ -112,7 +112,7 @@
             </div>
         </header>
 
-        <!-- Mode Picker -->
+        <!-- Seletor de modo -->
         <nav class="mode-picker" aria-label="Camera Modes">
             <div class="mode-list">
                 <button class="mode-item" onclick="location.href='index.html'">Night</button>
@@ -123,15 +123,15 @@
             </div>
         </nav>
 
-        <!-- Bottom Navigation -->
+        <!-- Navegação inferior -->
         <footer>
-            <!-- Gallery -->
+            <!-- Galeria -->
             <button class="gallery-btn" aria-label="Open Gallery">
                 <img alt="Recent photo preview" class="gallery-img"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpC9d-YwgJ0lAejhlXgTthoc5QEyDi7DZEB_LI-Qfm7uFvT3vTQYQ7cHrRtKvHgORJ71IUYKLa_wbG6GUmYjIvMKNzUepeg_VbrX6fgmTd9Zo6Y_1JCKGMl97BWnW544jIJsKUl18xlO7AfIS_1hSfkveuhnlGuXoSWEjFDKQQChlsVQeMM5-J8JFfNWC0dYpw1MMf7IBYTbHvZOSjW0GHyRav25Zwxkp10ZXLD-zPpXGV2AKqL4Yyqzr_m6TqBAGfJzaKOQGfmM4">
             </button>
 
-            <!-- Shutter (Empty space for more screen, or keep it?) -->
+            <!-- Shutter -->
             <div class="shutter-container" style="opacity: 0; pointer-events: none;">
                 <div class="shutter-glow" aria-hidden="true"></div>
                 <button class="shutter-btn" aria-label="Take photo">
@@ -141,7 +141,7 @@
                 </button>
             </div>
 
-            <!-- Flip Camera & AI -->
+            <!-- Câmera Flip e IA -->
             <div class="flip-wrapper">
                 <button class="flip-btn" aria-label="Switch camera">
                     <span class="material-symbols-outlined">flip_camera_ios</span>
@@ -155,7 +155,7 @@
 
     <script src="src/js/script.js"></script>
     <script>
-        // Ensure "Mais" is centered on load
+        // Certifique-se de que “Mais” fique centralizado ao carregar a página
         document.addEventListener('DOMContentLoaded', () => {
             const activeMode = document.querySelector('.mode-item.active');
             if (activeMode) activeMode.scrollIntoView({ inline: 'center' });

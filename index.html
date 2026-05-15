@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JOVI - Precision Camera</title>
     
-    <!-- Fonts -->
+    <!-- API EXTERNO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
+    <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body class="app-wrapper">
@@ -19,12 +19,12 @@
     <main class="app-container" id="camera-app">
         <!-- Viewfinder Layer -->
         <div class="viewfinder-layer">
-            <img id="camera-view" src="assets/imagem1.png" alt="Camera view" class="camera-view">
+            <img id="camera-view" src="/assets/imagem1.png" alt="Camera view" class="camera-view">
             <div class="scanline" aria-hidden="true"></div>
             <div class="viewfinder-overlay" aria-hidden="true"></div>
         </div>
 
-        <!-- Top Navigation -->
+        <!-- Navegação superior -->
         <header>
             <div class="header-group">
                 <button class="icon-btn" aria-label="Settings">
@@ -48,7 +48,7 @@
             </div>
         </header>
 
-        <!-- Mode Picker -->
+        <!-- Seletor de modo -->
         <nav class="mode-picker" aria-label="Camera Modes">
             <div class="mode-list">
                 <button class="mode-item">Night</button>
@@ -59,9 +59,9 @@
             </div>
         </nav>
 
-        <!-- Bottom Navigation -->
+        <!-- Navegação inferior -->
         <footer>
-            <!-- Gallery -->
+            <!-- Galeria -->
             <button class="gallery-btn" aria-label="Open Gallery">
                 <img alt="Recent photo preview" class="gallery-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpC9d-YwgJ0lAejhlXgTthoc5QEyDi7DZEB_LI-Qfm7uFvT3vTQYQ7cHrRtKvHgORJ71IUYKLa_wbG6GUmYjIvMKNzUepeg_VbrX6fgmTd9Zo6Y_1JCKGMl97BWnW544jIJsKUl18xlO7AfIS_1hSfkveuhnlGuXoSWEjFDKQQChlsVQeMM5-J8JFfNWC0dYpw1MMf7IBYTbHvZOSjW0GHyRav25Zwxkp10ZXLD-zPpXGV2AKqL4Yyqzr_m6TqBAGfJzaKOQGfmM4">
             </button>
@@ -76,7 +76,7 @@
                 </button>
             </div>
 
-            <!-- Flip Camera & AI -->
+            <!-- Câmera Flip e IA -->
             <div class="flip-wrapper">
                 <button class="flip-btn" aria-label="Switch camera">
                     <span class="material-symbols-outlined">flip_camera_ios</span>
@@ -85,7 +85,7 @@
             </div>
         </footer>
 
-        <!-- AI Chat Overlay -->
+        <!-- Sobreposição de chat com IA -->
         <section class="ai-overlay" id="ai-overlay">
             <div class="ai-panel">
                 <!-- Header -->
@@ -99,7 +99,7 @@
                     </button>
                 </div>
 
-                <!-- Messages -->
+                <!-- Mensagens -->
                 <div class="ai-messages" id="ai-messages">
                     <div class="ai-msg ai-msg-bot">
                         <div class="ai-avatar">AI</div>
@@ -107,7 +107,7 @@
                     </div>
                 </div>
 
-                <!-- Input -->
+                <!-- Entrada -->
                 <div class="ai-input-area">
                     <input type="text" class="ai-input" id="ai-input" placeholder="Pergunte à IA..." />
                     <button class="ai-send-btn" id="ai-send" aria-label="Send message">
@@ -117,7 +117,8 @@
             </div>
         </section>
     </main>
-
+            
+    <!-- JS EXTERNO -->
     <script src="src/js/script.js"></script>
 </body>
 </html>
