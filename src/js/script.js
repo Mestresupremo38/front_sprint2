@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const shutterBtn = document.querySelector('.shutter-btn');
     const flipBtn = document.querySelector('.flip-btn');
     const cameraView = document.getElementById('camera-view');
-    
+   
     let isFrontCamera = false;
 
-    // Handle Mode Switching
+    // Gerencia troca de modos
     modeItems.forEach(item => {
         item.addEventListener('click', () => {
             const modeText = item.textContent.trim().toUpperCase();
 
-            // Special handling for "MAIS"
+            // Tratamento especial para "MAIS"
             if (modeText === 'MAIS' || modeText === 'MORE') {
                 app.classList.add('mode-transitioning');
                 setTimeout(() => {
@@ -21,33 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Remove active state from all
+            // Remove o estado ativo de todos
             modeItems.forEach(i => i.classList.remove('active'));
 
-            // Set active state
+            // Define o estado ativo
             item.classList.add('active');
 
-            // Trigger transition effect
+            // Dispara efeito de transição
             app.classList.add('mode-transitioning');
             setTimeout(() => {
                 app.classList.remove('mode-transitioning');
             }, 500);
 
-            // Scroll into center
+            // Centraliza o item na tela
             item.scrollIntoView({ behavior: 'smooth', inline: 'center' });
         });
     });
 
-    // Handle Camera Flip
+    // Gerencia troca de câmera
     if (flipBtn) {
         flipBtn.addEventListener('click', () => {
             isFrontCamera = !isFrontCamera;
-            
-            // Add transition effect
+           
+            // Adiciona efeito de transição
             app.classList.add('mode-transitioning');
-            
+           
             setTimeout(() => {
-                // Change image source
+                // Altera a imagem da câmera
                 if (cameraView) {
                     cameraView.src = isFrontCamera ? 'src/assets/imagem2.png' : 'src/assets/imagem1.png';
                     cameraView.style.transform = isFrontCamera ? 'scaleX(-1)' : 'scaleX(1)';
@@ -60,16 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Center the active mode on load
+    // Centraliza o modo ativo ao carregar a página
     const activeMode = document.querySelector('.mode-item.active');
     if (activeMode) {
         activeMode.scrollIntoView({ inline: 'center' });
     }
 
-    // Simple Shutter Animation
+    // Animação simples do botão de captura
     if (shutterBtn) {
         shutterBtn.addEventListener('click', () => {
-            // Flash effect
+            // Efeito de flash
             const flash = document.createElement('div');
             flash.style.position = 'absolute';
             flash.style.inset = '0';
@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
             flash.style.zIndex = '100';
             flash.style.opacity = '0';
             flash.style.transition = 'opacity 0.1s ease-out';
-            
+           
             app.appendChild(flash);
-            
+           
             requestAnimationFrame(() => {
                 flash.style.opacity = '0.8';
                 setTimeout(() => {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========================
-    // AI Chat Overlay
+    // Overlay do Chat IA
     // ========================
     const aiBtn = document.querySelector('.ai-btn');
     const aiOverlay = document.getElementById('ai-overlay');
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aiSendBtn = document.getElementById('ai-send');
     const aiMessages = document.getElementById('ai-messages');
 
-    // Simulated bot responses
+    // Respostas simuladas do bot
     const botResponses = [
         'Posso ajudar a melhorar a iluminação da sua foto!',
         'Tente usar o modo retrato para fotos com fundo desfocado.',
@@ -143,11 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = aiInput.value.trim();
         if (!text) return;
 
-        // Add user message
+        // Adiciona mensagem do usuário
         addMessage(text, true);
         aiInput.value = '';
 
-        // Simulate bot response after delay
+        // Simula resposta do bot após um atraso
         setTimeout(() => {
             const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
             addMessage(randomResponse, false);
