@@ -1,10 +1,15 @@
+// ======================================================
+// JAVASCRIPT — COMMIT 1
+// git commit -m "feat: implementa navegação entre modos e troca de câmera"
+// ======================================================
+
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.getElementById('camera-app');
     const modeItems = document.querySelectorAll('.mode-item');
     const shutterBtn = document.querySelector('.shutter-btn');
     const flipBtn = document.querySelector('.flip-btn');
     const cameraView = document.getElementById('camera-view');
-   
+
     let isFrontCamera = false;
 
     // Gerencia troca de modos
@@ -42,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (flipBtn) {
         flipBtn.addEventListener('click', () => {
             isFrontCamera = !isFrontCamera;
-           
+
             // Adiciona efeito de transição
             app.classList.add('mode-transitioning');
-           
+
             setTimeout(() => {
                 // Altera a imagem da câmera
                 if (cameraView) {
@@ -66,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         activeMode.scrollIntoView({ inline: 'center' });
     }
 
+    // ======================================================
+    // JAVASCRIPT — COMMIT 2
+    // git commit -m "feat: adiciona animação de captura e chat IA"
+    // ======================================================
+
     // Animação simples do botão de captura
     if (shutterBtn) {
         shutterBtn.addEventListener('click', () => {
@@ -77,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
             flash.style.zIndex = '100';
             flash.style.opacity = '0';
             flash.style.transition = 'opacity 0.1s ease-out';
-           
+
             app.appendChild(flash);
-           
+
             requestAnimationFrame(() => {
                 flash.style.opacity = '0.8';
                 setTimeout(() => {

@@ -1,3 +1,8 @@
+/* ========================================================= */
+/* feat(css): adiciona estrutura global e layout responsivo */
+/* ========================================================= */
+
+
 :root {
     --primary: #8ff5ff;
     --primary-container: #00eefc;
@@ -11,7 +16,7 @@
     --white-5: rgba(255, 255, 255, 0.05);
     --white-10: rgba(255, 255, 255, 0.1);
     --white-20: rgba(255, 255, 255, 0.2);
-    
+
     --font-headline: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -49,7 +54,7 @@ body {
     max-width: 100dvw;
     overflow: hidden;
     background-color: var(--surface-lowest);
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-aspect-ratio: 1260/2800) {
@@ -90,9 +95,13 @@ body {
 .viewfinder-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 100%);
     pointer-events: none;
 }
+
+/* =============================================== */
+/* feat(css): adiciona header e seletor de modos */
+/* =============================================== */
 
 /* Header */
 header {
@@ -202,7 +211,8 @@ button {
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    padding: 0 50%; /* Permitir que o primeiro e o último item fiquem centralizados */
+    padding: 0 50%;
+    /* Permitir que o primeiro e o último item fiquem centralizados */
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -251,6 +261,10 @@ button {
     border-radius: 50%;
     box-shadow: 0 0 8px var(--primary);
 }
+
+/* ==================================================== */
+/* feat(css): adiciona footer, tela more e chat IA */
+/* ==================================================== */
 
 /* Navegação na parte inferior */
 footer {
@@ -350,7 +364,7 @@ footer {
 
 .shutter-btn:active {
     transform: scale(0.95);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .shutter-inner {
@@ -399,10 +413,22 @@ footer {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.2; }
-    100% { transform: scale(1); opacity: 0.5; }
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
 }
+
 /* Mais grade na tela (dentro do visor) */
 .more-viewfinder-grid {
     position: absolute;
@@ -475,7 +501,7 @@ footer {
 .grid-pattern {
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 30px 30px;
@@ -663,10 +689,21 @@ footer {
 }
 
 @keyframes aiDots {
-    0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
+    0% {
+        content: '';
+    }
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    75% {
+        content: '...';
+    }
 }
 
 /* Área de entrada */
@@ -724,6 +761,7 @@ footer {
         opacity: 0;
         transform: translateY(8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
