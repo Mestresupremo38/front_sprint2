@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 // Change image source
                 if (cameraView) {
-                    cameraView.src = isFrontCamera ? 'assets/imagem2.png' : 'assets/imagem1.png';
+                    cameraView.src = isFrontCamera ? 'src/assets/imagem2.png' : 'src/assets/imagem1.png';
                     cameraView.style.transform = isFrontCamera ? 'scaleX(-1)' : 'scaleX(1)';
                 }
             }, 250);
