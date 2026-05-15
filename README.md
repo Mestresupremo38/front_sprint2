@@ -1,5 +1,13 @@
 # Challenge JOVI 2026
 
+Integrantes:
+- Leonardo Ferreira (rm: 571311)
+- Daniel Ribeiro (rm: 571746)
+- Gustavo Ducatti (rm: 570932)
+- Felipi Godoy (rm: 573741)
+- Jecky Cossio (rm: 572226)
+
+
 Interface web que simula o aplicativo de câmera nativo de um smartphone Android premium.  
 O projeto reproduz fielmente a experiência de um app de câmera moderno, com visor de câmera, seletor de modos, botão de disparo, troca de câmera (flip), galeria e um chatbot de inteligência artificial integrado (**JOVI AI**) que futuramente terá funcionalidades agênticas.
 
