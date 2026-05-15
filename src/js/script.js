@@ -4,11 +4,33 @@
 // ======================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    const isIndex = window.location.pathname.endsWith('index.html') || !window.location.pathname.includes('.html');
+    if (isIndex) {
+        const permite = prompt("Você permite que a câmera tenha acesso à galeria do dispositivo?");
+        if (permite && permite.toLowerCase() === 'sim') {
+            alert("Ok, agora pode realizar as suas capturas");
+        } else {
+            alert("você não poderá realizar capturas");
+        }
+    }
+
     const app = document.getElementById('camera-app');
     const modeItems = document.querySelectorAll('.mode-item');
     const shutterBtn = document.querySelector('.shutter-btn');
     const flipBtn = document.querySelector('.flip-btn');
     const cameraView = document.getElementById('camera-view');
+    const galleryBtn = document.querySelector('.gallery-btn');
+
+    if (galleryBtn) {
+        galleryBtn.addEventListener('click', () => {
+            const permiteGaleria = prompt("Você permite que o app tenha acesso a galeria do dispositivo?");
+            if (permiteGaleria && permiteGaleria.toLowerCase() === 'sim') {
+                alert("ok, agora pode acessar as suas imagens e videos");
+            } else {
+                alert("você não poderá acessar suas imagens e videos.");
+            }
+        });
+    }
 
     let isFrontCamera = false;
 
@@ -164,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800 + Math.random() * 700);
     }
 
-    // Event listeners
+    // Listeners de eventos do chat IA
     if (aiBtn) {
         aiBtn.addEventListener('click', openAiOverlay);
     }
