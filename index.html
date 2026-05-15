@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JOVI - Precision Camera</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body class="app-wrapper">
+    <!-- App Container -->
+    <main class="app-container" id="camera-app">
+        <!-- Viewfinder Layer -->
+        <div class="viewfinder-layer">
+            <img id="camera-view" src="assets/imagem1.png" alt="Camera view" class="camera-view">
+            <div class="scanline" aria-hidden="true"></div>
+            <div class="viewfinder-overlay" aria-hidden="true"></div>
+        </div>
+
+        <!-- Top Navigation -->
+        <header>
+            <div class="header-group">
+                <button class="icon-btn" aria-label="Settings">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <button class="icon-btn primary" aria-label="Flash">
+                    <span class="material-symbols-outlined">flash_on</span>
+                </button>
+            </div>
+
+            <div class="header-group">
+                <button class="status-badge" aria-label="HDR settings">
+                    <span class="badge-text-hdr">HDR</span>
+                </button>
+                <button class="status-badge" aria-label="Resolution and framerate">
+                    <div class="badge-resolution">
+                        <span class="res-main">4K</span>
+                        <span class="res-sub">60</span>
+                    </div>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mode Picker -->
+        <nav class="mode-picker" aria-label="Camera Modes">
+            <div class="mode-list">
+                <button class="mode-item">Night</button>
+                <button class="mode-item">Portrait</button>
+                <button class="mode-item active">Photo</button>
+                <button class="mode-item">Video</button>
+                <button class="mode-item">Mais</button>
+            </div>
+        </nav>
+
+        <!-- Bottom Navigation -->
+        <footer>
+            <!-- Gallery -->
+            <button class="gallery-btn" aria-label="Open Gallery">
+                <img alt="Recent photo preview" class="gallery-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpC9d-YwgJ0lAejhlXgTthoc5QEyDi7DZEB_LI-Qfm7uFvT3vTQYQ7cHrRtKvHgORJ71IUYKLa_wbG6GUmYjIvMKNzUepeg_VbrX6fgmTd9Zo6Y_1JCKGMl97BWnW544jIJsKUl18xlO7AfIS_1hSfkveuhnlGuXoSWEjFDKQQChlsVQeMM5-J8JFfNWC0dYpw1MMf7IBYTbHvZOSjW0GHyRav25Zwxkp10ZXLD-zPpXGV2AKqL4Yyqzr_m6TqBAGfJzaKOQGfmM4">
+            </button>
+
+            <!-- Shutter -->
+            <div class="shutter-container">
+                <div class="shutter-glow" aria-hidden="true"></div>
+                <button class="shutter-btn" aria-label="Take photo">
+                    <div class="shutter-inner">
+                        <div class="shutter-core"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Flip Camera & AI -->
+            <div class="flip-wrapper">
+                <button class="flip-btn" aria-label="Switch camera">
+                    <span class="material-symbols-outlined">flip_camera_ios</span>
+                </button>
+                <button class="ai-btn" aria-label="AI Mode">AI</button>
+            </div>
+        </footer>
+
+        <!-- AI Chat Overlay -->
+        <section class="ai-overlay" id="ai-overlay">
+            <div class="ai-panel">
+                <!-- Header -->
+                <div class="ai-header">
+                    <div class="ai-header-left">
+                        <span class="ai-logo">AI</span>
+                        <span class="ai-title">JOVI AI</span>
+                    </div>
+                    <button class="ai-close-btn" id="ai-close" aria-label="Close AI">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Messages -->
+                <div class="ai-messages" id="ai-messages">
+                    <div class="ai-msg ai-msg-bot">
+                        <div class="ai-avatar">AI</div>
+                        <div class="ai-bubble">Olá! Sou a JOVI AI. Como posso ajudar com sua foto?</div>
+                    </div>
+                </div>
+
+                <!-- Input -->
+                <div class="ai-input-area">
+                    <input type="text" class="ai-input" id="ai-input" placeholder="Pergunte à IA..." />
+                    <button class="ai-send-btn" id="ai-send" aria-label="Send message">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>
